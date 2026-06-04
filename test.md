@@ -33,8 +33,8 @@ $y_i$ – целевое значение.
 
 5. **Подстановка**:
    $$
-\frac{\partial Q}{\partial \theta_j} = \frac{2}{\ell} \sum_{i=1}^{\ell} \bigl( \langle \theta, x_i \rangle + \theta_0 - y_i \bigr) x_{ij}
-$$
+   \frac{\partial Q}{\partial \theta_j} = \frac{2}{\ell} \sum_{i=1}^{\ell} \bigl( \langle \theta, x_i \rangle + \theta_0 - y_i \bigr) x_{ij}
+   $$
    
 ---
 
