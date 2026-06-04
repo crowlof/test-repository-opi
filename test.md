@@ -17,9 +17,9 @@ $y_i$ – целевое значение.
 Возьмём частную производную по $\theta_j$ ($j=1,\dots,d$):
 
 1. **Линейность дифференцирования** (производная суммы, вынос константы $1/\ell$):
-   <pre lang="tex">
+   $$
    \frac{\partial Q}{\partial \theta_j} = \frac{1}{\ell} \sum_{i=1}^{\ell} \frac{\partial}{\partial \theta_j} \bigl( \underbrace{\langle \theta, x_i \rangle + \theta_0 - y_i}_{=: \varepsilon_i} \bigr)^2.
-   </pre>   
+   $$
 
 3. **Производная квадрата** (правило цепочки):
    $$
