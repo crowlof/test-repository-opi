@@ -16,13 +16,13 @@ $y_i$ – целевое значение.
 
 Возьмём частную производную по $\theta_j$ ($j=1,\dots,d$):
 
-1. Для удобства назначаем переменную:
+1. Для упрощения записи обозначим ошибку модели на i-м объекте:
 
 $$
 \varepsilon_i = \sum_{k=1}^{d} \theta_k x_{ik} + \theta_0 - y_i
 $$
 
-3. **Производная квадрата**:
+3. Частная производная Q по $\theta_j$ (Производная квадрата):
    
 $$
 \frac{\partial}{\partial \theta_j} \varepsilon_i^2 = 2\varepsilon_i \cdot \frac{\partial \varepsilon_i}{\partial \theta_j}.
