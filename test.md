@@ -1,8 +1,8 @@
 # Решение задания Q1: Градиент MSE для линейной регрессии
 
-## 1. Вывод частной производной $ \frac{\partial Q}{\partial \theta_j} $
+## 1. Вывод частной производной 
 
-Дана функция потерь (эмпирический риск):
+Дана функция потерь:
 
 $$
 Q(\theta, X^\ell) = \frac{1}{\ell} \sum_{i=1}^{\ell} \bigl( \langle \theta, x_i \rangle + \theta_0 - y_i \bigr)^2,
@@ -17,21 +17,25 @@ $y_i$ – целевое значение.
 Возьмём частную производную по $\theta_j$ ($j=1,\dots,d$):
 
 1. **Линейность дифференцирования** (производная суммы, вынос константы $1/\ell$):
+   
    $$
    \frac{\partial Q}{\partial \theta_j} = \frac{1}{\ell} \sum_{i=1}^{\ell} \frac{\partial}{\partial \theta_j} \bigl( \underbrace{\langle \theta, x_i \rangle + \theta_0 - y_i}_{=: \varepsilon_i} \bigr)^2.
    $$
 
 3. **Производная квадрата** (правило цепочки):
+   
    $$
    \frac{\partial}{\partial \theta_j} \varepsilon_i^2 = 2\varepsilon_i \cdot \frac{\partial \varepsilon_i}{\partial \theta_j}.
    $$
 
-4. **Вычисление $\frac{\partial \varepsilon_i}{\partial \theta_j}$**:
+5. **Вычисление $\frac{\partial \varepsilon_i}{\partial \theta_j}$**:
+   
    $$
    \varepsilon_i = \sum_{k=1}^{d} \theta_k x_{ik} + \theta_0 - y_i \quad\Rightarrow\quad \frac{\partial \varepsilon_i}{\partial \theta_j} = x_{ij}.
    $$
 
-5. **Подстановка**:
+7. **Подстановка**:
+   
    $$
    \frac{\partial Q}{\partial \theta_j} = \frac{2}{\ell} \sum_{i=1}^{\ell} \bigl( \langle \theta, x_i \rangle + \theta_0 - y_i \bigr) x_{ij}
    $$
