@@ -31,7 +31,7 @@ $$
 5. **Вычисление $\frac{\partial \varepsilon_i}{\partial \theta_j}$**:
    
 $$
-\varepsilon_i = \sum_{k=1}^{d} \theta_k x_{ik} + \theta_0 - y_i \quad\Rightarrow\quad \frac{\partial \varepsilon_i}{\partial \theta_j} = x_{ij}.
+\frac{\partial \varepsilon_i}{\partial \theta_j} = x_{ij}.
 $$
 
 6. **Подстановка**:
