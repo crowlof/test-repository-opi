@@ -19,26 +19,26 @@ $y_i$ – целевое значение.
 1. **Линейность дифференцирования** (производная суммы, вынос константы $1/\ell$):
 
 $$
-\frac{\partial Q}{\partial \theta_j} = \frac{1}{\ell} \sum_{i=1}^{\ell} \frac{\partial}{\partial \theta_j} \bigl( \underbrace{\langle \theta, x_i \rangle + \theta_0 - y_i}_{=: \varepsilon_i} \bigr)^2.
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
 $$
 
 3. **Производная квадрата** (правило цепочки):
    
-   $$
-   \frac{\partial}{\partial \theta_j} \varepsilon_i^2 = 2\varepsilon_i \cdot \frac{\partial \varepsilon_i}{\partial \theta_j}.
-   $$
+$$
+\frac{\partial}{\partial \theta_j} \varepsilon_i^2 = 2\varepsilon_i \cdot \frac{\partial \varepsilon_i}{\partial \theta_j}.
+$$
 
 5. **Вычисление $\frac{\partial \varepsilon_i}{\partial \theta_j}$**:
    
-   $$
-   \varepsilon_i = \sum_{k=1}^{d} \theta_k x_{ik} + \theta_0 - y_i \quad\Rightarrow\quad \frac{\partial \varepsilon_i}{\partial \theta_j} = x_{ij}.
-   $$
+$$
+\varepsilon_i = \sum_{k=1}^{d} \theta_k x_{ik} + \theta_0 - y_i \quad\Rightarrow\quad \frac{\partial \varepsilon_i}{\partial \theta_j} = x_{ij}.
+$$
 
 7. **Подстановка**:
    
-   $$
-   \frac{\partial Q}{\partial \theta_j} = \frac{2}{\ell} \sum_{i=1}^{\ell} \bigl( \langle \theta, x_i \rangle + \theta_0 - y_i \bigr) x_{ij}
-   $$
+$$
+\frac{\partial Q}{\partial \theta_j} = \frac{2}{\ell} \sum_{i=1}^{\ell} \bigl( \langle \theta, x_i \rangle + \theta_0 - y_i \bigr) x_{ij}
+$$
    
 ---
 
