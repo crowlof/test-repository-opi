@@ -5,7 +5,7 @@
 Дана функция потерь (эмпирический риск):
 
 $$
-Q(\theta, \theta_0, X^\ell) = \frac{1}{\ell} \sum_{i=1}^{\ell} \bigl( \langle \theta, x_i \rangle + \theta_0 - y_i \bigr)^2,
+Q(\theta, X^\ell) = \frac{1}{\ell} \sum_{i=1}^{\ell} \bigl( \langle \theta, x_i \rangle + \theta_0 - y_i \bigr)^2,
 $$
 
 где  
@@ -17,21 +17,21 @@ $y_i$ – целевое значение.
 Возьмём частную производную по $\theta_j$ ($j=1,\dots,d$):
 
 1. **Линейность дифференцирования** (производная суммы, вынос константы $1/\ell$):
-   $$
+   <pre lang="tex">
    \frac{\partial Q}{\partial \theta_j} = \frac{1}{\ell} \sum_{i=1}^{\ell} \frac{\partial}{\partial \theta_j} \bigl( \underbrace{\langle \theta, x_i \rangle + \theta_0 - y_i}_{=: \varepsilon_i} \bigr)^2.
-   $$
+   </pre>   
 
-2. **Производная квадрата** (правило цепочки):
+3. **Производная квадрата** (правило цепочки):
    $$
    \frac{\partial}{\partial \theta_j} \varepsilon_i^2 = 2\varepsilon_i \cdot \frac{\partial \varepsilon_i}{\partial \theta_j}.
    $$
 
-3. **Вычисление $\frac{\partial \varepsilon_i}{\partial \theta_j}$**:
+4. **Вычисление $\frac{\partial \varepsilon_i}{\partial \theta_j}$**:
    $$
    \varepsilon_i = \sum_{k=1}^{d} \theta_k x_{ik} + \theta_0 - y_i \quad\Rightarrow\quad \frac{\partial \varepsilon_i}{\partial \theta_j} = x_{ij}.
    $$
 
-4. **Подстановка**:
+5. **Подстановка**:
    $$
    \frac{\partial Q}{\partial \theta_j} = \frac{1}{\ell} \sum_{i=1}^{\ell} 2\varepsilon_i \cdot x_{ij}
    = \frac{2}{\ell} \sum_{i=1}^{\ell} \bigl( \langle \theta, x_i \rangle + \theta_0 - y_i \bigr) x_{ij}.
