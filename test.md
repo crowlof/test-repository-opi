@@ -33,12 +33,9 @@ $y_i$ – целевое значение.
 
 5. **Подстановка**:
    $$
-   \frac{\partial Q}{\partial \theta_j} = \frac{1}{\ell} \sum_{i=1}^{\ell} 2\varepsilon_i \cdot x_{ij}
-   = \frac{2}{\ell} \sum_{i=1}^{\ell} \bigl( \langle \theta, x_i \rangle + \theta_0 - y_i \bigr) x_{ij}.
-   $$
-
-Это искомая формула для отдельного веса $\theta_j$.
-
+\frac{\partial Q}{\partial \theta_j} = \frac{2}{\ell} \sum_{i=1}^{\ell} \bigl( \langle \theta, x_i \rangle + \theta_0 - y_i \bigr) x_{ij}
+$$
+   
 ---
 
 ## 2. Матричная форма градиента по всему вектору $\theta$
