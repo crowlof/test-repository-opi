@@ -28,14 +28,14 @@ $$
 \frac{\partial}{\partial \theta_j} \varepsilon_i^2 = 2\varepsilon_i \cdot \frac{\partial \varepsilon_i}{\partial \theta_j}.
 $$
 
-3. **Вычисление $\frac{\partial \varepsilon_i}{\partial \theta_j}$:**
+3. **Вычисление $\frac{\partial \varepsilon_i}{\partial \theta_j}$:**  
 Производная по $\theta_j$ равна коэффициенту при $\theta_j$, то есть $x_i:
    
 $$
 \frac{\partial \varepsilon_i}{\partial \theta_j} = x_{ij}.
 $$
 
-4. Итоговая формула для частной производной:
+4. Итоговая формула для частной производной:  
 Подставляем в выражение из п.3:
    
 $$
