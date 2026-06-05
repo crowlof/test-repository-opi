@@ -52,21 +52,25 @@ $$
 - $\mathbf{1}$ – вектор-столбец из единиц длины $\ell$.
 
 Тогда вектор ошибок:
+
 $$
 \varepsilon = X\theta + \theta_0\mathbf{1} - \mathbf{y}.
 $$
 
 Функционал:
+
 $$
 Q = \frac{1}{\ell} \|\varepsilon\|^2 = \frac{1}{\ell} \varepsilon^\top \varepsilon.
 $$
 
 Дифференцируя по $\theta$:
+
 $$
 \nabla_\theta Q = \frac{2}{\ell} X^\top \varepsilon.
 $$
 
 Аналогично, градиент по $\theta_0$:
+
 $$
 \frac{\partial Q}{\partial \theta_0} = \frac{2}{\ell} \mathbf{1}^\top \varepsilon.
 $$
@@ -79,19 +83,23 @@ $$
 Расширенный вектор параметров $\tilde{\theta} = (\theta_0, \theta_1,\dots,\theta_d)^\top$.
 
 Тогда скалярное произведение:
+
 $$
 \langle \tilde{\theta}, \tilde{x}_i \rangle = \theta_0 \cdot 1 + \sum_{j=1}^{d} \theta_j x_{ij} = \langle \theta, x_i \rangle + \theta_0.
 $$
 
 Функционал качества:
+
 $$
 Q = \frac{1}{\ell} \sum_{i=1}^{\ell} \bigl( \langle \tilde{\theta}, \tilde{x}_i \rangle - y_i \bigr)^2.
 $$
 
 Градиент по $\tilde{\theta}$:
+
 $$
 \nabla_{\tilde{\theta}} Q = \frac{2}{\ell} \tilde{X}^\top \varepsilon,
 $$
+
 где $\tilde{X}$ – матрица $\ell \times (d+1)$ с первым столбцом из единиц. Первая компонента этого градиента в точности равна $\partial Q / \partial \theta_0$, а остальные – $\partial Q / \partial \theta_j$. Таким образом, добавление единичного столбца позволяет унифицировать запись и автоматически учитывать смещение.
 
 ---
