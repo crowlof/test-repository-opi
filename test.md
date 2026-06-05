@@ -29,14 +29,14 @@ $$
 $$
 
 3. Вычисление $\frac{\partial \varepsilon_i}{\partial \theta_j}$:
-   Производная по $\theta_j$ равна коэффициенту при $\theta_j$, то есть $x_i:
+Производная по $\theta_j$ равна коэффициенту при $\theta_j$, то есть $x_i:
    
 $$
 \frac{\partial \varepsilon_i}{\partial \theta_j} = x_{ij}.
 $$
 
 4. Итоговая формула для частной производной:
-   Подставляем в выражение из п.3:
+Подставляем в выражение из п.3:
    
 $$
 \frac{\partial Q}{\partial \theta_j} = \frac{2}{\ell} \sum_{i=1}^{\ell} \bigl( \langle \theta, x_i \rangle + \theta_0 - y_i \bigr) x_{ij}
