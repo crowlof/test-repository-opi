@@ -22,19 +22,20 @@ $$
 \varepsilon_i = \sum_{k=1}^{d} \theta_k x_{ik} + \theta_0 - y_i
 $$
 
-3. Частная производная Q по $\theta_j$ (Производная квадрата):
+2. Частная производная Q по $\theta_j$ (Производная квадрата):
    
 $$
 \frac{\partial}{\partial \theta_j} \varepsilon_i^2 = 2\varepsilon_i \cdot \frac{\partial \varepsilon_i}{\partial \theta_j}.
 $$
 
-5. **Вычисление $\frac{\partial \varepsilon_i}{\partial \theta_j}$**:
+3. **Вычисление $\frac{\partial \varepsilon_i}{\partial \theta_j}$**:
+   Производная по $\theta_j$ равна коэффициенту при $\theta_j$, то есть $x_i:
    
 $$
 \frac{\partial \varepsilon_i}{\partial \theta_j} = x_{ij}.
 $$
 
-6. **Подстановка**:
+4. **Подстановка**:
    
 $$
 \frac{\partial Q}{\partial \theta_j} = \frac{2}{\ell} \sum_{i=1}^{\ell} \bigl( \langle \theta, x_i \rangle + \theta_0 - y_i \bigr) x_{ij}
